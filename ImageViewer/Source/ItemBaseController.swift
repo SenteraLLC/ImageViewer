@@ -18,7 +18,7 @@ open class ItemBaseController<T: UIView>: UIViewController, ItemController, UIGe
     //UI
     public var itemView = T()
     let scrollView = UIScrollView()
-    let activityIndicatorView = UIActivityIndicatorView(style: .white)
+    let activityIndicatorView = UIActivityIndicatorView(style: .medium)
 
     //DELEGATE / DATASOURCE
     weak public var delegate:                 ItemControllerDelegate?
@@ -114,7 +114,7 @@ open class ItemBaseController<T: UIView>: UIViewController, ItemController, UIGe
         activityIndicatorView.hidesWhenStopped = true
     }
 
-    @available (*, unavailable)
+    @available(*, unavailable)
     required public init?(coder aDecoder: NSCoder) { fatalError() }
 
     deinit {
